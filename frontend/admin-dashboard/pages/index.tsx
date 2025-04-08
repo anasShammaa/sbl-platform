@@ -1,0 +1,1 @@
+export default function Home() { return <h1>Welcome to Sham Beauty Lounge Admin</h1>; }

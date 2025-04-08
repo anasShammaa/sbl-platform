@@ -1,0 +1,25 @@
+# Java
+target/
+*.class
+
+# Maven
+log/
+*.log
+dependency-reduced-pom.xml
+
+# Node
+node_modules/
+dist/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Env files
+.env

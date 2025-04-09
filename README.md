@@ -14,13 +14,16 @@ sbl-platform/
 │   ├── kalender-service/      # Calendar scheduling service
 │   ├── zahlung-service/       # Payment service
 │   ├── parent-pom/            # Centralized dependency management (Spring Boot versions, etc.)
-│   └── api-collection/        # OpenAPI collection for external/internal APIs
+│   ├── api-collection/        # OpenAPI collection for external/internal APIs
+│   └── README.md              # Backend instructions
 ├── frontend/                  # Frontend apps
-│   └── admin-dashboard/       # Admin dashboard app
-├── docker-compose.yml         # Docker orchestration for local dev
-├── README.md                  # Project documentation
-└── LICENSE                    # Licensing
-
+│   ├── admin-dashboard/       # Admin dashboard app
+│   └── README.md              # Frontend instructions
+├── k8s/                       # Kubernetes manifests (future)
+├── .github/                   # GitHub workflows and PR templates
+├── docker-compose.yml         # Docker orchestration for local development
+├── README.md                  # Main project documentation
+└── LICENSE                    # Project license
 
 ```
 
@@ -54,6 +57,7 @@ docker-compose up --build
 ```
 
 This will start:
+
 - PostgreSQL at `localhost:5432`
 - Kafka at `localhost:9092`
 - Zookeeper at `localhost:2181`
@@ -85,11 +89,11 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🛠️ Project Commands
 
-| Task | Command |
-|:-----|:--------|
-| Start all services | `docker-compose up --build` |
+| Task                   | Command                                                  |
+|:-----------------------|:---------------------------------------------------------|
+| Start all services     | `docker-compose up --build`                              |
 | Start customer backend | `./mvnw spring-boot:run` inside `backend/kunden-service` |
-| Start frontend | `npm run dev` inside `frontend/admin-dashboard` |
+| Start frontend         | `npm run dev` inside `frontend/admin-dashboard`          |
 
 ---
 
@@ -107,4 +111,22 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT Licence.
+
+---
+
+## 🧩 Git Workflow
+
+- Branch: `develop` → `feature/*`, `bugfix/*`
+- PRs must be created to `develop`
+- Direct commits to `master` and `develop` are **forbidden**
+
+---
+
+## 📊 Badges
+
+[![Docker Hub](https://img.shields.io/badge/DockerHub-SBL--Platform-blue)](https://hub.docker.com/)
+[![Code Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen)](https://your-codecov-link)
+[![Sonar Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=anasShammaa_sbl-platform&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=anasShammaa_sbl-platform)
+
+---

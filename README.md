@@ -9,14 +9,19 @@ includes customer management, appointment booking, payment handling, and an admi
 
 ```bash
 sbl-platform/
+├── parent-pom/               
+│   └── pom.xml             
+├── api-collection/
 ├── backend/
-│   ├── kunden-service/         # Customer Service (Spring Boot)
-│   ├── kalender-service/       # Calendar Service (Spring Boot)
-│   └── zahlung-service/        # Payment Service (Spring Boot)
+│   ├── kunden-service/
+│   ├── kalender-service/
+│   └── zahlung-service/
 ├── frontend/
-│   └── admin-dashboard/        # Admin UI (Next.js + TailwindCSS)
-├── docker-compose.yml          # Docker setup for PostgreSQL, Kafka, Zookeeper
-└── README.md                   # This file
+│   └── admin-dashboard/
+├── docker-compose.yml
+├── README.md
+└── LICENSE
+
 ```
 
 ---

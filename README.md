@@ -9,18 +9,18 @@ includes customer management, appointment booking, payment handling, and an admi
 
 ```bash
 sbl-platform/
-├── parent-pom/               
-│   └── pom.xml             
-├── api-collection/
-├── backend/
-│   ├── kunden-service/
-│   ├── kalender-service/
-│   └── zahlung-service/
-├── frontend/
-│   └── admin-dashboard/
-├── docker-compose.yml
-├── README.md
-└── LICENSE
+├── backend/                  # All backend services
+│   ├── kunden-service/        # Customer management service
+│   ├── kalender-service/      # Calendar scheduling service
+│   ├── zahlung-service/       # Payment service
+│   ├── parent-pom/            # Centralized dependency management (Spring Boot versions, etc.)
+│   └── api-collection/        # OpenAPI collection for external/internal APIs
+├── frontend/                  # Frontend apps
+│   └── admin-dashboard/       # Admin dashboard app
+├── docker-compose.yml         # Docker orchestration for local dev
+├── README.md                  # Project documentation
+└── LICENSE                    # Licensing
+
 
 ```
 

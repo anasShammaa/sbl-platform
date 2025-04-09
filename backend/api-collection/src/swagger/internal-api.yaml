@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: Internal API Example
+  version: 1.0.0
+paths:
+  /internal/customers:
+    post:
+      summary: Create internal customer
+      operationId: createInternalCustomer
+      responses:
+        '201':
+          description: Created successfully

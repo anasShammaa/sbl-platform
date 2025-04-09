@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: External API Example
+  version: 1.0.0
+paths:
+  /external/customers:
+    get:
+      summary: Get external customer data
+      operationId: getExternalCustomers
+      responses:
+        '200':
+          description: Successful response
